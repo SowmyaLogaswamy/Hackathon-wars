@@ -1,0 +1,13 @@
+<h2> Teams </h2>
+<h4> Here are the teams participationg in the Hackathon-War </h4>
+
+<div *ngFor="let squad of squads | async"  class="panel panel-success" id ="demo">
+  <div class="panel-body">
+    <h3 (click) = "goToDetailPage(squad)">{{squad.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{squad.description}}
+      <hr>
+      <app-edit-squad [selectedSquad]="squad"></app-edit-squad>
+    </div>
+  </div>
+</div>

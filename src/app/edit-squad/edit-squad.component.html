@@ -1,0 +1,13 @@
+<h4>Edit Teams</h4>
+
+<label>New Team Name:</label>
+<input [(ngModel)]="selectedSquad.name">
+<br>
+<br>
+<label>New Team Description:</label>
+<textarea [(ngModel)]="selectedSquad.description"></textarea>
+
+
+<button (click)="beginUpdatingSquad(selectedSquad)">Update</button>
+<hr>
+<button (click)="beginDeletingSquad(selectedSquad)">Delete</button>
